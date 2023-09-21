@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+    <title>Sledování Lokomotiv: Trasa</title>
+</head>
+<body>
+    <center>
+        <table style="padding-bottom: 10px; width: 90%;">
+            <tr>
+                <td rowspan="2">
+                    <form style="padding: 10px;" method="POST">
+                        <input type="submit" name="start_dump" value="Aktualizuj výpis">
+                    </form>
+                </td>
+                <td>Poslední záznam:</td>
+                <td>[ROUTE-LAST-UPDATE]</td>
+            </tr>
+            <tr>
+                <td>Další možná aktualizace:</td>
+                <td>[ROUTE-NEXT-UPDATE]</td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <form method="POST">
+                        <a style="padding-right: 20px;">Dotaz na loko:</a>
+                        <input placeholder="749121 / 925427491210" type="text" name="loco_number_single", style="padding: 5px;", size="20">
+                        <input type="submit" name="get_single_loco_button" value="Proveď dotaz", style="padding: 5px;">
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <form method="POST">
+                        <a style="padding-right: 20px;">Dotaz na vlak:</a>
+                        <input placeholder="141 / 47503" type="text" name="train_number_single", style="padding: 5px;", size="20">
+                        <input type="submit" name="get_single_train_button" value="Proveď dotaz", style="padding: 5px;">
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">[ROUTE-CONTENT]</td>
+            </tr>
+        </table>
+    </center>
+</body>

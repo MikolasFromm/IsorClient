@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+    <title>Sledování Lokomotiv: Editor</title>
+</head>
+<body>
+    <center>
+        <table style="padding-bottom: 10px; width: 60%;">
+            <tr>
+                <td colspan="4">
+                    <a href="../" style="color: inherit;"><h3>Hlavní stránka</h3></a>
+                </td>
+            </tr>
+            <tr>
+                <td><h2>Lokomotiva</h2></td>
+                <td><h2>Poznámka</h2></td>
+                <td><h2>Uživatel</h2></td>
+                <td><h2>Smazání</h2></td>
+            </tr>
+            [TABLE-ROWS]
+        </table>
+        <hr style="width:50%;text-align:center;">
+
+        <h2>Přidání nové lokomotivy</h2>
+
+        <table style="padding-bottom: 10vw;">
+            <tr>
+                <td><h4>Číslo lokomotivy</h4></td>
+                <td><h4>Poznámka</h4></td>
+                <td><h4>Uživatel</h4></td>
+                <td></td>                
+            </tr>
+            <tr>
+                <form style="padding: 20px;" method="POST">
+                    <td><input placeholder="749121 / 7491210 / 925427491210" type="text" name="loco_number", style="padding: 5px;", size="30"></td>
+                    <td><input placeholder="Popisek" type="text" name="loco_note", style="padding: 5px;", size="50"></td>
+                    <td><input placeholder="Tvoje jméno" type="text" name="loco_editor_name", style="padding: 5px;", size="20"></td>
+                    <td><input type="submit" name="add_loco" value="Přidej lokomotivu", style="padding: 5px;"></td>
+                </form>
+            </tr>
+        </table>
+    </center>
+</body>

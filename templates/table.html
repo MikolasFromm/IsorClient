@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+    <title>Sledování Lokomotiv: Přehled</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://zeleznicni-zpravodaj.azurewebsites.net/static/laky.css">
+</head>
+<body>
+    <center>
+        <table style="padding-bottom: 10px; width: 90%;">
+            <tr>
+                <td rowspan="2" colspan="2">
+                    <a href="/addloco" style="color: inherit;"><h3>Přid. loko</h3></a>
+                </td>
+                <td rowspan="2" colspan="2">
+                    <form style="padding: 10px;" method="POST">
+                        <input type="submit" name="start_dump" value="Aktualizuj výpis">
+                    </form>
+                </td>
+                <td>Posl. update:</td>
+                <td>[TABLE-LAST-UPDATE]</td>
+            </tr>
+            <tr>
+                <td>Další možný update:</td>
+                <td>[TABLE-NEXT-UPDATE]</td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                    <form method="POST">
+                        <a style="padding-right: 20px;">Dotaz na loko:</a>
+                        <input placeholder="749121 / 925427491210" type="text" name="loco_number_single", style="padding: 5px;", size="20">
+                        <input type="submit" name="get_single_loco_button" value="Proveď dotaz", style="padding: 5px;">
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                    <form method="POST">
+                        <a style="padding-right: 20px;">Dotaz na vlak:</a>
+                        <input placeholder="141 / 47503" type="text" name="train_number_single", style="padding: 5px;", size="20">
+                        <input type="submit" name="get_single_train_button" value="Proveď dotaz", style="padding: 5px;">
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td style="border-bottom: thin solid;">
+                    <h2>Loko</h2>
+                </td>
+                <td style="border-bottom: thin solid;">
+                    <h2>Funkce</h2>
+                </td>
+                <td style="border-bottom: thin solid;">
+                    <h2>Vlak</h2>
+                </td>
+                <td style="border-bottom: thin solid;">
+                    <h2>Rezerv.</h2>
+                </td>
+                <td style="border-bottom: thin solid;">
+                    <h2>Pozice</h2>
+                </td>
+                <td style="border-bottom: thin solid;">
+                    <h2>Čas</h2>
+                </td>
+            </tr>
+            [TABLE-ROWS]
+            <!-- [EMPTY-ROW] -->
+        </table>
+    </center>
+</body>

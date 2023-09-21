@@ -1,0 +1,11 @@
+/* laky vozidel */
+.lakVozidla {
+  padding: 0.2ex 1ex;
+  display: inline-block;
+  margin-bottom: 0.3ex;
+}
+
+.berta_modra {
+  background: #3C4DC1 ;
+  color: #FFB0B0 ;
+}

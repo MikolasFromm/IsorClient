@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+    <title>Sledování Lokomotiv: Přehled</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://zeleznicni-zpravodaj.azurewebsites.net/static/laky.css">
+</head>
+<body>
+    <center>
+        <table style="padding-bottom: 10px; width: 90%;">
+            <tr>
+                <td rowspan="2" colspan="2">
+                    <a href="/addloco" style="color: inherit;"><h3>Přid. loko</h3></a>
+                </td>
+                <td rowspan="2" colspan="2">
+                    <form style="padding: 10px;" method="POST">
+                        <input type="submit" name="start_dump" value="Aktualizuj výpis">
+                    </form>
+                </td>
+                <td>Posl. update:</td>
+                <td>2023-09-21 22:14:06</td>
+            </tr>
+            <tr>
+                <td>Další možný update:</td>
+                <td>2023-09-21 22:44:06</td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                    <form method="POST">
+                        <a style="padding-right: 20px;">Dotaz na loko:</a>
+                        <input placeholder="749121 / 925427491210" type="text" name="loco_number_single", style="padding: 5px;", size="20">
+                        <input type="submit" name="get_single_loco_button" value="Proveď dotaz", style="padding: 5px;">
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                    <form method="POST">
+                        <a style="padding-right: 20px;">Dotaz na vlak:</a>
+                        <input placeholder="141 / 47503" type="text" name="train_number_single", style="padding: 5px;", size="20">
+                        <input type="submit" name="get_single_train_button" value="Proveď dotaz", style="padding: 5px;">
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td style="border-bottom: thin solid;">
+                    <h2>Loko</h2>
+                </td>
+                <td style="border-bottom: thin solid;">
+                    <h2>Funkce</h2>
+                </td>
+                <td style="border-bottom: thin solid;">
+                    <h2>Vlak</h2>
+                </td>
+                <td style="border-bottom: thin solid;">
+                    <h2>Rezerv.</h2>
+                </td>
+                <td style="border-bottom: thin solid;">
+                    <h2>Pozice</h2>
+                </td>
+                <td style="border-bottom: thin solid;">
+                    <h2>Čas</h2>
+                </td>
+            </tr>
+            <tr>
+    <td style="border-bottom: thin solid;"><a class="berta_modra lakVozidla" href="/get/loco/749121", style="text-decoration: none">749.121</a></td>
+    <td style="border-bottom: thin solid;"></td>
+    <td style="border-bottom: thin solid;"><a href="/get/train/---", style="text-decoration: none; color: inherit">---</a></td>
+    <td style="border-bottom: thin solid;"><a href="/get/train/---", style="text-decoration: none; color: inherit">---</a></td>
+    <td style="border-bottom: thin solid;">+Bohumín os.n.</td>
+    <td style="border-bottom: thin solid;">15.08.2023 19:04</td>
+</tr>
+            <!-- [EMPTY-ROW] -->
+        </table>
+    </center>
+</body>
