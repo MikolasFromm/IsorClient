@@ -1,6 +1,8 @@
 # IsorClient
 Scrapper of current locomotive positions in Czech Republic.
 
+![Developer preview](https://github.com/MikolasFromm/IsorClient/blob/main/pic/IsorClient-table-preview.png)
+
 ## Introduction
 The following WebApp is a simplification of a user overview of data from ISOŘ - railway administrator portal for tracking locomotives and trains. The program scrappes the responses from their portal and prints them out in more compressed, better looking HTML table.
 **A legit ISOŘ account is required to run the application successfully** and there is no *"demo"* account included in this repo.
