@@ -33,13 +33,18 @@ class TableGenerator:
             ## else make the separation
             currentTime = datetime.now(ZoneInfo('Europe/Berlin'))
             for loco in locomotives:
-                timeDiff = currentTime.replace(tzinfo=None) - datetime.strptime(loco.time, "%d.%m.%Y %H:%M")
-                timeDiffSeconds = timeDiff.total_seconds()
 
-                if (loco.trainNumReservation != "---") or ( (timeDiffSeconds / 3600 ) <= 24 ): ## when having a reservation or a move in the last 24h
-                    self.hotLocomotives.append(loco)
-                else:
+                if loco.time is None or loco.time == "":
                     self.coldLocomotives.append(loco)
+
+                else:
+                    timeDiff = currentTime.replace(tzinfo=None) - datetime.strptime(loco.time, "%d.%m.%Y %H:%M")
+                    timeDiffSeconds = timeDiff.total_seconds()
+
+                    if (loco.trainNumReservation != "---") or ( (timeDiffSeconds / 3600 ) <= 24 ): ## when having a reservation or a move in the last 24h
+                        self.hotLocomotives.append(loco)
+                    else:
+                        self.coldLocomotives.append(loco)
 
     def getIndexTableAsync(self, locomotives : list[Loco], dumper : IsorDumper):
         self.getIndexTable(dumper.dumpLocomotivesPOST(locomotives), dumper.wholeTableRequestDelay)
