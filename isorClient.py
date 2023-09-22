@@ -20,7 +20,7 @@ class IsorClient:
 
         ## request delay
         self.lastRequest = time.time()
-        self.requestDelay = 0.5
+        self.requestDelay = 0.7
         self.lastRequestUrl = ""
 
         ## session cookies
