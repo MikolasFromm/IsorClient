@@ -20,7 +20,7 @@ class IsorClient:
 
         ## request delay
         self.lastRequest = time.time()
-        self.requestDelay = 0.7
+        self.requestDelay = 0.5
         self.lastRequestUrl = ""
 
         ## session cookies
@@ -101,7 +101,7 @@ class IsorClient:
 
             self.logger.debug("Not logged in to ISOR, trying to log in again...")
 
-            result = self.loginToISOR(self.username, self.password)
+            result = self.loginToISOR()
 
             if not result:
 
