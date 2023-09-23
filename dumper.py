@@ -189,15 +189,19 @@ class IsorDumper:
                     self._logger.debug(f"Couldn't find reservation train number for locomotive {locomotive.number}.")
 
                 else:
+                    ## default backup value
                     nextTrainNum = "---"
-                    if (len(reservationTrainNum) > 1): ## if there are more reservations, usually the first is for the same train, skip it
-                        tempNextTrainNum = reservationTrainNum[1].strip().lstrip('0') ## take the second reservation
-                        if (tempNextTrainNum != exportModel.trainNum): ## if different from the current train
+
+                    ## first try the first reservation
+                    tempNextTrainNum = reservationTrainNum[0].strip().lstrip('0')
+                    if (tempNextTrainNum != exportModel.trainNum): ## if different from the current train
                             nextTrainNum = tempNextTrainNum
                     else:
-                        tempNextTrainNum = reservationTrainNum[0].strip().lstrip('0')
-                        if (tempNextTrainNum != exportModel.trainNum): ## if different from the current train
-                            nextTrainNum = tempNextTrainNum
+                    ## secondly try the second reservation
+                        if (len(reservationTrainNum) > 1): ## if there are more reservations, usually the first is for the same train, skip it
+                            tempNextTrainNum = reservationTrainNum[1].strip().lstrip('0') ## take the second reservation
+                            if (tempNextTrainNum != exportModel.trainNum): ## if different from the current train
+                                nextTrainNum = tempNextTrainNum
 
                     exportModel.trainNumReservation = nextTrainNum ## save the reservation
 
